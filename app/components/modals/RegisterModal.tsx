@@ -26,7 +26,7 @@ const {register,handleSubmit,formState:{errors}} =useForm<FieldValues>({
   }
 })
 
-const onSubmit:SubmitHandler<FieldValues> =(data) =>{
+const onSubmit:SubmitHandler<FieldValues> =(data:any) =>{
   setIsLoading(true)
   axios.post("/api/register",data)
   .then(()=>{
@@ -34,7 +34,7 @@ const onSubmit:SubmitHandler<FieldValues> =(data) =>{
     loginModal.onOpen()
   registerModal.onClose()
   })
-  .catch((error)=>{
+  .catch((error:any)=>{
     toast.error(error)
   })
   .finally(()=>{

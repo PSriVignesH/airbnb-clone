@@ -6,7 +6,7 @@ interface Props {
   onClose:()=> void
 }
 
-const useRegisterModal =create<Props>((set)=>({
+const useRegisterModal =create<Props>((set:any)=>({
   isOpen:false,
   onOpen:()=> set({isOpen :true}),
   onClose:()=> set({isOpen :false}),

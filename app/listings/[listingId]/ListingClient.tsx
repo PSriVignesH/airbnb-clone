@@ -36,7 +36,7 @@ const ListingClient:FC<Props> = ({listing,reservations=[],currentUser}) => {
   const [totalPrice, setTotalPrice] = useState(listing.price)
   const [dateRange, setDateRange] = useState<Range>(initialDateRange)
   const category =useMemo(()=>{
-    return categories.find((items)=>items.label === listing.category)
+    return categories.find((items:any)=>items.label === listing.category)
   },[listing.category])
 
   const disabledDates = useMemo(()=>{

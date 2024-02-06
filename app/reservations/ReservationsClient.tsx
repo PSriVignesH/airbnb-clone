@@ -28,7 +28,7 @@ const ReservationsClient:FC<Props> = ({reservations,currentUser}) => {
       router.refresh()
     })
     .catch
-    ((error)=>{
+    ((error:any)=>{
       toast.error(error?.response?.data?.error)
     })
     .finally(()=>{

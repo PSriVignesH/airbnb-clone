@@ -71,7 +71,7 @@ const onNext =()=>{
   setStep((value)=>value + 1)
 }
 
-const onSubmit:SubmitHandler<FieldValues>= (data)=>{
+const onSubmit:SubmitHandler<FieldValues>= (data:any)=>{
   if(step !== STEPS.PRICE){
     return onNext()
   }
@@ -109,7 +109,7 @@ let bodyContent =  (
     <Heading title="Which of these best describes your place" subtitle="Pick a category"/>
     <div className='grid grid-cols-1 md:grid-cols-4 gap-3 mah-h-[50vh] overflow-y-auto'>
       {
-        categories.map((item)=>{
+        categories.map((item:any)=>{
           return <div key={item.label} className='col-span-1'>
             <CategoryInput label={item.label}  icon={item.icon} selected={category === item.label} onClick={(category)=>setCustomvalue("category",category)}/>
           </div>

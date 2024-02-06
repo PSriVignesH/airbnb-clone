@@ -76,7 +76,7 @@ export default async function getListings(params:ListingParams){
       }
     })
 
-    const formattedListings = listings.map((listing)=>{
+    const formattedListings = listings.map((listing:any)=>{
       return {
         ...listing,
         createdAt:listing.createdAt.toISOString()

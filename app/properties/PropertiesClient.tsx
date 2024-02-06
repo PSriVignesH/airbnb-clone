@@ -29,7 +29,7 @@ const PropertiesClient:FC<Props> = ({listings,currentUser}) => {
       router.refresh()
     })
     .catch
-    ((error)=>{
+    ((error:any)=>{
       toast.error("Something went wrong")
     })
     .finally(()=>{
