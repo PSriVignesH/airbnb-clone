@@ -19,6 +19,7 @@
     "next": "14.0.4",
     "next-auth": "^4.24.5",
     "next-cloudinary": "^5.18.0",
+    "prisma": "^5.9.1",
     "query-string": "^8.1.0",
     "react": "^18",
     "react-date-range": "^2.0.0-alpha.4",
