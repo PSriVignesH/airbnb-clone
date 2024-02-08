@@ -11,6 +11,7 @@ import Modal from './Modal'
 import { useRouter, useSearchParams } from 'next/navigation'
 import qs from 'query-string'
 import { formatISO } from 'date-fns'
+import dynamic from 'next/dynamic'
 
 enum STEPS {
   LOCATION = 0,
@@ -33,6 +34,10 @@ const SearchModal = () => {
  })
 
  const params = useSearchParams()
+
+ const Map = useMemo(() => dynamic(() => import('../Map'), { 
+  ssr: false 
+}), [location]);
 
  const onBack =()=>{
   setStep((value)=>value -1)
